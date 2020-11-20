@@ -50,6 +50,40 @@ body {
   width: 130px;
 }
 
+.float-video__container--open,
+.float-video__container--open:hover {
+  width: 250px;
+}
+
+.float-video__minimize {
+  display: none;
+}
+
+.float-video__container--open .float-video__minimize {
+  display: block;
+  background-image: url("./minimize.png");
+  height: 32px;
+  width: 32px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+.float-video__container--open .float-video__close {
+  display: none;
+}
+
+.float-video__container--open:hover .float-video__minimize {
+  opacity: 1;
+}
+
 .float-video__close {
   background-image: url("./close.png");
   height: 32px;
